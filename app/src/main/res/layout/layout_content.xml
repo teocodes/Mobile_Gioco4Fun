@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/current_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Squadra"
+        style="@style/text_team_current"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/label_turn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Turno:"
+            style="@style/normal_text"
+            />
+
+        <TextView
+            android:id="@+id/current_turn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="N turno"
+            style="@style/normal_text"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/border_area"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/textArea"
+            style="@style/text_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:text="New Text\nvrrvrvrrvv\nefefkesfkl\nskfeskmlf\nkesfkekmf\nfekmsfkekkfkn\nendnedweufkekfwbfwe
+                            fefewewfsefs\nfefeew\nfwefew\nqwdqwdqw\nefwefew\nffsfewes\nwefrewf\nwegrehrfsdfew\nwefewfew\nsadcas" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Continue"
+        android:textSize="20sp"
+        android:typeface="serif" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change card"
+        android:id="@+id/button"
+        android:layout_marginTop="5dp"
+        android:typeface="serif"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="3dp"
+        android:layout_gravity="center"
+        android:gravity="bottom"
+        android:paddingBottom="20dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/ic_timer"
+            android:layout_margin="5dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_dice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/ic_dice"
+            android:layout_margin="5dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_words"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/ic_words"
+            android:layout_margin="5dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/ic_letter"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>
