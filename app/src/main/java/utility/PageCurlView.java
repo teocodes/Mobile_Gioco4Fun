@@ -300,8 +300,8 @@ public class PageCurlView extends View {
 
         // Create pages
         mPages = new ArrayList<Bitmap>();
-        mPages.add(BitmapFactory.decodeResource(getResources(), R.drawable.book));
-        mPages.add(BitmapFactory.decodeResource(getResources(), R.drawable.book));
+        mPages.add(BitmapFactory.decodeResource(getResources(), R.layout.layout_words));
+        mPages.add(BitmapFactory.decodeResource(getResources(), R.layout.layout_words));
 
         // Create some sample images
         mForeground = mPages.get(0);

@@ -16,6 +16,7 @@ import android.widget.NumberPicker;
 import adapter.TeamAdapter;
 import utility.Dice;
 import utility.TimerView;
+import utility.Words;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -143,6 +144,9 @@ public class MainActivity extends AppCompatActivity {
                 d.setTitle("Open book");
                 d.setCancelable(true);
                 d.setContentView(R.layout.layout_words);
+
+                LinearLayout linearLayout = (LinearLayout) d.findViewById(R.id.background_book);
+                new Words(MainActivity.this,linearLayout);
 
                 Button cancel = (Button) d.findViewById(R.id.btn_cancel_words);
                 cancel.setOnClickListener(new View.OnClickListener() {

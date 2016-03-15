@@ -10,16 +10,8 @@
         android:layout_height="250dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/book_open"
+        android:background="@drawable/book_close"
         android:gravity="center_horizontal">
-
-        <utility.PageCurlView
-        android:id="@+id/curl_view"
-        android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:orientation="vertical"
-        android:background="@drawable/book"></utility.PageCurlView>
-
 
         <TextView
             android:id="@+id/words"
@@ -30,8 +22,8 @@
             android:text="ProvaNonSo"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:typeface="sans" />
-
+            android:typeface="sans"
+            android:visibility="invisible"/>
 
     </LinearLayout>
 

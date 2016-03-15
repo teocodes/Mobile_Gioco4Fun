@@ -91,16 +91,4 @@ public class Dice{
         }
     };
 
-
-//    //Clean up
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        dice_sound.pause(sound_id);
-//    }
-//
-//    protected void onDestroy() {
-//        super.onDestroy();
-//        timer.cancel();
-//    }
 }
