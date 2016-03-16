@@ -13,11 +13,11 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.NumberPicker;
 
-import adapter.TeamAdapter;
-import utility.Dice;
-import utility.Letters;
-import utility.TimerView;
-import utility.Words;
+import com.example.matteo.adapter.TeamAdapter;
+import com.example.matteo.utility.Dice;
+import com.example.matteo.utility.Letters;
+import com.example.matteo.utility.TimerView;
+import com.example.matteo.utility.Words;
 
 public class MainActivity extends AppCompatActivity {
 

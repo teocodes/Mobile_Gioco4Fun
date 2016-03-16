@@ -1,9 +1,9 @@
 package com.example.matteo.prova_2;
 
+import com.example.matteo.model.Team;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import model.Team;
 
 /**
  * Created by matteo on 07/03/2016.

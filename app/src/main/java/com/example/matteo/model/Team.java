@@ -1,4 +1,4 @@
-package model;
+package com.example.matteo.model;
 
 /**
  * Created by matteo on 07/03/2016.

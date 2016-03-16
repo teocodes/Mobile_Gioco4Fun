@@ -1,4 +1,4 @@
-package adapter;
+package com.example.matteo.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,11 +7,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.matteo.model.Team;
 import com.example.matteo.prova_2.R;
 
 import java.util.List;
-
-import model.Team;
 
 /**
  * Created by matteo on 07/03/2016.
