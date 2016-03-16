@@ -15,6 +15,11 @@ import android.view.View;
 public class TimerView extends View {
     private final Paint backgroundPaint;
     private final Paint progressPaint;
+
+    public Paint getTextPaint() {
+        return textPaint;
+    }
+
     private final Paint textPaint;
 
     private long startTime;
@@ -30,13 +35,13 @@ public class TimerView extends View {
     private float textHeight;
     private float textOffset;
 
-    private final Handler viewHandler;
-    private final Runnable updateView;
+    private  Handler viewHandler;
+    private  Runnable updateView;
 
     private boolean flag;
 
 
-    public TimerView(Context context) {
+    public TimerView(Context context, long maxTime) {
         super(context);
 
         // used to fit the circle into
@@ -47,7 +52,7 @@ public class TimerView extends View {
         handleRadius = 10;
 
         // limit the counter to go up to maxTime ms
-        maxTime = 5000;
+        this.maxTime = maxTime;
 
         // start and current time
         startTime = System.currentTimeMillis();
@@ -80,7 +85,22 @@ public class TimerView extends View {
         textHeight = textPaint.descent() - textPaint.ascent();
         textOffset = (textHeight / 2) - textPaint.descent();
 
+        progress = 1;
+        progressMillisecond = this.maxTime;
 
+    }
+
+    public void start(boolean startTimer){
+        if(startTimer){
+            // start and current time
+            startTime = System.currentTimeMillis();
+            currentTime = startTime;
+
+            init();
+        }
+    }
+
+    private void init(){
         // This will ensure the animation will run periodically
         viewHandler = new Handler();
         updateView = new Runnable() {
@@ -133,7 +153,7 @@ public class TimerView extends View {
         canvas.drawArc(circleBounds, -90, (float) (progress * 360), false, progressPaint);
 
         // display text inside the circle
-        canvas.drawText((double) (progressMillisecond / 100) / 10 + "s",
+        canvas.drawText((progressMillisecond/60000)+":"+(progressMillisecond / 1000)%60 + "m",
                 centerWidth,
                 centerHeight + textOffset,
                 textPaint);

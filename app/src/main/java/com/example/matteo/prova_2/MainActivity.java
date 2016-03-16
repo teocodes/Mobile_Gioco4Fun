@@ -85,16 +85,17 @@ public class MainActivity extends AppCompatActivity {
 
                         LinearLayout lt = (LinearLayout) d2.findViewById(R.id.space_for_timer);
 
-                        TimerView tv = new TimerView(MainActivity.this);
-                        tv.setMaxTime(np.getValue() * 1000);
+                        final TimerView tv = new TimerView(MainActivity.this, np.getValue() * 60000);
+//                        tv.setMaxTime(np.getValue() * 1000);
                         tv.setRadius(300);
                         lt.addView(tv);
 
-                        Button btnStartPause = (Button) d2.findViewById(R.id.btn_start_pause);
-                        btnStartPause.setOnClickListener(new View.OnClickListener() {
+                        final Button btnStart = (Button) d2.findViewById(R.id.btn_start);
+                        btnStart.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-
+                                tv.start(true);
+                                btnStart.setText("Restart");
                             }
                         });
 
