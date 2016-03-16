@@ -1,37 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/background_book"
+        android:id="@+id/background_letter"
         android:layout_width="320dp"
         android:layout_height="250dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/book_not_stretch"
+        android:background="@drawable/letters"
         android:gravity="center_horizontal">
 
         <TextView
-            android:id="@+id/words"
+            android:id="@+id/letters"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@android:color/background_light"
-            android:text="ProvaNonSo"
-            android:textSize="24sp"
+            android:layout_gravity="center|top"
+            android:background="@android:color/transparent"
+            android:text="Z"
+            android:textColor="@android:color/black"
+            android:textSize="100sp"
             android:textStyle="bold"
-            android:typeface="sans"
-            android:visibility="invisible"/>
+            android:typeface="serif"
+            android:visibility="invisible" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_cancel_words"
+        android:id="@+id/btn_cancel_letters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Cancel" />
-
 </LinearLayout>

@@ -15,6 +15,13 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btn_start_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_gravity="center"/>
+
+    <Button
         android:id="@+id/btn_cancel_timer_action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

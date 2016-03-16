@@ -11,32 +11,34 @@ import android.widget.TextView;
 
 import com.example.matteo.prova_2.R;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by matteo on 15/03/2016.
+ * Created by matteo on 16/03/2016.
  */
-public class Words {
+public class Letters {
 
-    LinearLayout book_picture;        //reference to dice picture
+    LinearLayout alphabet_picture;        //reference to dice picture
     Random rng = new Random();    //generate random numbers
-    SoundPool book_sound = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+    SoundPool shake_sound = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
     int sound_id;        //Used to control sound stream return by SoundPool
     Handler handler;    //Post message to start roll
     Timer timer = new Timer();    //Used to implement feedback to user
     boolean rolling = false;        //Is die rolling?
     Context context;
-    TextView word;
-    public Words(Context context, LinearLayout book_picture) {
-        sound_id = book_sound.load(context, R.raw.page_flip, 1);
-        this.book_picture = book_picture;
+    TextView letter;
+    public Letters(Context context, LinearLayout alphabet_picture) {
+        sound_id = shake_sound.load(context, R.raw.shake_letters, 1);
+        this.alphabet_picture = alphabet_picture;
         handler = new Handler(callback);
         this.context = context;
-        this.word = (TextView)book_picture.findViewById(R.id.words);
+        this.letter = (TextView) alphabet_picture.findViewById(R.id.letters);
 
-        this.book_picture.setOnClickListener(new View.OnClickListener() {
+        this.alphabet_picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 handleClick(v);
@@ -50,10 +52,10 @@ public class Words {
         if (!rolling) {
             rolling = true;
             //Show rolling image
-            book_picture.setBackgroundResource(R.drawable.book_not_stretch);
-            word.setVisibility(View.INVISIBLE);
+            alphabet_picture.setBackgroundResource(R.drawable.letters);
+            letter.setVisibility(View.INVISIBLE);
             //Start rolling sound
-            book_sound.play(sound_id, 1.0f, 1.0f, 0, 0, 1.0f);
+            shake_sound.play(sound_id, 1.0f, 1.0f, 0, 0, 1.0f);
             //Pause to allow image to update
             timer.schedule(new Roll(), 400);
         }
@@ -69,11 +71,14 @@ public class Words {
     //Receives message from timer to start dice roll
     Handler.Callback callback = new Handler.Callback() {
         public boolean handleMessage(Message msg) {
-            book_picture.setBackgroundResource(R.drawable.book_open);
-            word.setVisibility(View.VISIBLE);
+            alphabet_picture.setBackgroundResource(R.drawable.letter_border);
+            List<String> alphabetList = Arrays.asList(context.getResources().getStringArray(R.array.alphabet_array));
+
+            letter.setText(alphabetList.get(rng.nextInt(26)));
+
+            letter.setVisibility(View.VISIBLE);
             rolling = false;    //user can press again
             return true;
         }
     };
 }
-

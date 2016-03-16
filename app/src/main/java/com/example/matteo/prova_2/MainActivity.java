@@ -15,6 +15,7 @@ import android.widget.NumberPicker;
 
 import adapter.TeamAdapter;
 import utility.Dice;
+import utility.Letters;
 import utility.TimerView;
 import utility.Words;
 
@@ -89,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
                         tv.setRadius(300);
                         lt.addView(tv);
 
+                        Button btnStartPause = (Button) d2.findViewById(R.id.btn_start_pause);
+                        btnStartPause.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            }
+                        });
+
                         Button cancel = (Button) d2.findViewById(R.id.btn_cancel_timer_action);
                         cancel.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -141,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final Dialog d=new Dialog(MainActivity.this);
-                d.setTitle("Open book");
+                d.setTitle("Choose word");
                 d.setCancelable(true);
                 d.setContentView(R.layout.layout_words);
 
@@ -149,6 +158,30 @@ public class MainActivity extends AppCompatActivity {
                 new Words(MainActivity.this,linearLayout);
 
                 Button cancel = (Button) d.findViewById(R.id.btn_cancel_words);
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        d.dismiss();
+                    }
+                });
+
+                d.show();
+            }
+        });
+
+        FloatingActionButton letters = (FloatingActionButton) findViewById(R.id.fab_letter);
+        letters.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog d=new Dialog(MainActivity.this);
+                d.setTitle("Choose letter");
+                d.setCancelable(true);
+                d.setContentView(R.layout.layout_letters);
+
+                LinearLayout linearLayout = (LinearLayout) d.findViewById(R.id.background_letter);
+                new Letters(MainActivity.this,linearLayout);
+
+                Button cancel = (Button) d.findViewById(R.id.btn_cancel_letters);
                 cancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
