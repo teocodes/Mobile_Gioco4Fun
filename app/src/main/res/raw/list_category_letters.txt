@@ -1,0 +1,10 @@
+Pesca 1 lettera e formula una frase di senso compiuto , le cui parole inizino tutte con tale lettera
+Pesca 3 lettere e formula 7  parole che contengano tali lettere
+Pesca 4  lettere e formula 4  parole che contengano tali lettere
+Pesca 2 lettere e formula 10 parole che contengano tali lettere
+Pesca 5  lettere e formula 2 parole che contengano tali lettere
+Pesca 6 lettere e formula 1 parola che contenga tali lettere
+Pesca 1 lettera e trova 3 titoli di film che inizino con tale lettera
+Pesca 1 lettera e trova 5  nomi di calciatori che inizino con tale lettera
+Pesca 1 lettera e trova 5 nomi di animali che inizino con tale lettera
+Pesca 1 lettera e trova 5 nazioni che inizino con tale lettera

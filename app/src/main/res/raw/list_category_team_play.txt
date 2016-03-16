@@ -1,0 +1,30 @@
+Mimo: Animale/Volatile
+Mimo: Animale/Felino
+Mimo: Animale/Mammifero
+Mimo: Oggetto/Da tavolo
+Mimo: Oggetto/Da giardino
+Mimo: Oggetto/Da spiaggia
+Mimo: Sport/Invernali
+Mimo: Sport/Individuali
+Mimo: Sport/Di squadra
+Mimo: Tuo compagno di squadra
+Mimo: Tuo avversario
+Imitazione: Personaggio/Attore
+Imitazione: Personaggio/Attrice
+Imitazione: Personaggio/Comico
+Imitazione: Personaggio/Comica
+Imitazione: Personaggio/Presentatore
+Imitazione: Personaggio/Presentatrice
+Imitazione: Scena Film/Horror
+Imitazione: Scena Film/Avventura
+Imitazione: Scena Film/Azione
+Imitazione: Tuo compagno di squadra
+Imitazione: Tuo avversario
+Indovina canzone: Canzone/Italiana
+Indovina canzone: Canzone/Straniera
+Indovina canzone: Canzone/Genere: Dance
+Indovina canzone: Canzone/Genere: Pop
+Indovina canzone: Canzone/Genere: Rock
+Disegno: Animale/Volatile
+Disegno: Animale/Felino
+Disegno: Animale/Mammifero

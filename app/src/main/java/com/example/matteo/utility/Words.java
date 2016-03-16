@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.matteo.prova_2.R;
 
+import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -29,19 +30,21 @@ public class Words {
     boolean rolling = false;        //Is die rolling?
     Context context;
     TextView word;
-    public Words(Context context, LinearLayout book_picture) {
+    List<String> list = null;
+
+    public Words(Context context, LinearLayout book_picture, List<String> list) {
         sound_id = book_sound.load(context, R.raw.page_flip, 1);
         this.book_picture = book_picture;
         handler = new Handler(callback);
         this.context = context;
         this.word = (TextView)book_picture.findViewById(R.id.words);
-
         this.book_picture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 handleClick(v);
             }
         });
+        this.list = list;
 
     }
 
@@ -70,6 +73,7 @@ public class Words {
     Handler.Callback callback = new Handler.Callback() {
         public boolean handleMessage(Message msg) {
             book_picture.setBackgroundResource(R.drawable.book_open);
+            word.setText(list.get(rng.nextInt(list.size())) );
             word.setVisibility(View.VISIBLE);
             rolling = false;    //user can press again
             return true;
