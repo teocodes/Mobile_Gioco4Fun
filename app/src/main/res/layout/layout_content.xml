@@ -49,9 +49,7 @@
             style="@style/text_area"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"
-            android:text="New Text\nvrrvrvrrvv\nefefkesfkl\nskfeskmlf\nkesfkekmf\nfekmsfkekkfkn\nendnedweufkekfwbfwe
-                            fefewewfsefs\nfefeew\nfwefew\nqwdqwdqw\nefwefew\nffsfewes\nwefrewf\nwegrehrfsdfew\nwefewfew\nsadcas" />
+            android:editable="false"/>
 
     </ScrollView>
 
@@ -66,10 +64,10 @@
         android:typeface="serif" />
 
     <Button
+        android:id="@+id/btn_change"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Change card"
-        android:id="@+id/button"
         android:layout_marginTop="5dp"
         android:typeface="serif"
         android:textSize="20sp" />

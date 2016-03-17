@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.matteo.adapter.TeamAdapter;
 import com.example.matteo.file.FileOperation;
+import com.example.matteo.operation.Operation;
 import com.example.matteo.utility.Dice;
 import com.example.matteo.utility.Letters;
 import com.example.matteo.utility.TimerView;
@@ -26,6 +27,13 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private TeamAdapter teamAdapter = null;
+
+    private Operation op = null;
+    private List<String> data = null;
+    private TextView teamName = null;
+    private TextView currentTurn = null;
+    private TextView textView = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +59,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        TextView textView = (TextView) findViewById(R.id.textArea);
-        textView.setText("prova sovrascrittura");
+        op = new Operation(MainActivity.this);
+        data = op.getTurnData();
 
+        teamName = (TextView) findViewById(R.id.current_team);
+        teamName.setText(data.get(0));
+
+        currentTurn = (TextView) findViewById(R.id.current_turn);
+        currentTurn.setText(data.get(1));
+
+        textView = (TextView) findViewById(R.id.textArea);
+        textView.setText(data.get(2));
 
         //timer
         FloatingActionButton timer = (FloatingActionButton) findViewById(R.id.fab_timer);
@@ -210,6 +226,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button changeCard = (Button) findViewById(R.id.btn_change);
+        changeCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView.setText(op.areaData());
+            }
+        });
 
+        Button btnContinue = (Button) findViewById(R.id.btn_continue);
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }

@@ -29,4 +29,5 @@ public class Constants {
     public final static String ID_QUESTION = "id_question";
     public final static String CONTENT_QUESTION = "content";
     public final static String ID_CATEGORY_QUESTION = "category";
+
 }

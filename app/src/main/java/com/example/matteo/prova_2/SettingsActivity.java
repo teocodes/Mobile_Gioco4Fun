@@ -63,9 +63,6 @@ public class SettingsActivity extends Activity {
             }
         });
 
-
-
-
         Button btnConfirm = (Button)findViewById(R.id.btn_confirm);
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
