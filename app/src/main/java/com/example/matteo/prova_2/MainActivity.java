@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        FakeTeam fakeTeam = new FakeTeam();
-        teamAdapter = new TeamAdapter(fakeTeam.getFakeList());
+        TeamCreator teamCreator = new TeamCreator(MainActivity.this);
+        teamAdapter = new TeamAdapter(teamCreator.getTeamList());
 
         ListView listView = (ListView) findViewById(R.id.drawer_list);
         listView.setAdapter(teamAdapter);
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TextView textView = (TextView) findViewById(R.id.textArea);
-        textView.setText("Cazzi miei");
+        textView.setText("prova sovrascrittura");
 
 
         //timer
