@@ -5,6 +5,8 @@ package com.example.matteo.utility;
  */
 public class Constants {
 
+    public final static  String PREF_FILE = "PREF_FILE";
+
     //database name
     public final static String DATABASE_NAME = "db_game";
 

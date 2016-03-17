@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.NumberPicker;
+import android.widget.TextView;
 
 import com.example.matteo.adapter.TeamAdapter;
 import com.example.matteo.file.FileOperation;
@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        TextView textView = (TextView) findViewById(R.id.textArea);
+        textView.setText("Cazzi miei");
+
 
         //timer
         FloatingActionButton timer = (FloatingActionButton) findViewById(R.id.fab_timer);
@@ -64,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 d.setContentView(R.layout.layout_timer);
 
                 final NumberPicker np = (NumberPicker) d.findViewById(R.id.numberPicker1);
-                np.setMaxValue(100);
+                np.setMaxValue(59);
                 np.setMinValue(1);
                 np.setWrapSelectorWheel(false);
 
@@ -152,12 +155,12 @@ public class MainActivity extends AppCompatActivity {
 
         //carico words file nel db
         FileOperation fo = new FileOperation();
-        final List<String> listWords = fo.readFile(MainActivity.this, R.raw.list_category_fantasy);
+        final List<String> listWords = fo.readFile(MainActivity.this, R.raw.list_words);
 
-        Log.i("STAMP", "arriva");
-        for(int i=0;i<listWords.size();i++) {
-            Log.i("LIST", listWords.get(i));
-        }
+//        Log.i("STAMP", "arriva");
+//        for(int i=0;i<listWords.size();i++) {
+//            Log.i("LIST", listWords.get(i));
+//        }
 
         FloatingActionButton words = (FloatingActionButton) findViewById(R.id.fab_words);
         words.setOnClickListener(new View.OnClickListener() {
