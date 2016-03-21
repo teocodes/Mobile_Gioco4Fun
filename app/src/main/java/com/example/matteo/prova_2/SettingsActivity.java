@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -49,7 +50,9 @@ public class SettingsActivity extends Activity {
                 for(int i=0;i< teamsNumber;i++){
                     EditText editText = new EditText(SettingsActivity.this);
                     editText.setId(i);
-                    editText.setPadding(0, 0, 0, 5);
+                    editText.setPadding(15, 0, 15, 5);
+                    int maxLength = 35;
+                    editText.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});
                     editText.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.MATCH_PARENT));
                     linearLayout.addView(editText);

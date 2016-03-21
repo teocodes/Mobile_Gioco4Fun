@@ -49,7 +49,9 @@
             style="@style/text_area"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:editable="false"/>
+            android:editable="false"
+            android:paddingBottom="3dp"
+            />
 
     </ScrollView>
 
