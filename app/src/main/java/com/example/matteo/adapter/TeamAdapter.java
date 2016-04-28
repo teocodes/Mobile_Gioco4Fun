@@ -103,5 +103,4 @@ public class TeamAdapter extends BaseAdapter {
         super.notifyDataSetChanged();
     }
 
-
 }

@@ -109,6 +109,7 @@ public class SettingsActivity extends Activity {
 
                     Intent intent = new Intent(SettingsActivity.this, MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }
             }
         });

@@ -1,6 +1,7 @@
 package com.example.matteo.prova_2;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.DrawerLayout;
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        op = new Operation(MainActivity.this);
+        op = Operation.getIstance(MainActivity.this);
         data = op.getTurnData();
 
         teamName = (TextView) findViewById(R.id.current_team);
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(data.get(2));
 
         //timer
-        FloatingActionButton timer = (FloatingActionButton) findViewById(R.id.fab_timer);
+        final FloatingActionButton timer = (FloatingActionButton) findViewById(R.id.fab_timer);
         timer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //dice
-        FloatingActionButton dice = (FloatingActionButton) findViewById(R.id.fab_dice);
+        final FloatingActionButton dice = (FloatingActionButton) findViewById(R.id.fab_dice);
         dice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -178,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 //            Log.i("LIST", listWords.get(i));
 //        }
 
-        FloatingActionButton words = (FloatingActionButton) findViewById(R.id.fab_words);
+        final FloatingActionButton words = (FloatingActionButton) findViewById(R.id.fab_words);
         words.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -202,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton letters = (FloatingActionButton) findViewById(R.id.fab_letter);
+        final FloatingActionButton letters = (FloatingActionButton) findViewById(R.id.fab_letter);
         letters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -226,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button changeCard = (Button) findViewById(R.id.btn_change);
+        final Button changeCard = (Button) findViewById(R.id.btn_change);
         changeCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -234,10 +235,62 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btnContinue = (Button) findViewById(R.id.btn_continue);
+        final Button btnContinue = (Button) findViewById(R.id.btn_continue);
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                List<String> list = op.getTurnData();
+                teamName.setText(list.get(0));
+                currentTurn.setText(list.get(1));
+                textView.setText(list.get(2));
+
+                if(list.get(0).compareTo("") == 0){
+                    btnContinue.setEnabled(false);
+                    changeCard.setEnabled(false);
+                    letters.setEnabled(false);
+                    words.setEnabled(false);
+                    dice.setEnabled(false);
+                    timer.setEnabled(false);
+                    btnDrawer.setEnabled(false);
+
+
+                    textView.setText("Classifica finale:\n\n");
+
+                    for(int i=0;i<teamAdapter.getCount();i++){
+                        textView.append(teamAdapter.getItem(i).getName()+" - "+String.valueOf(teamAdapter.getItem(i).getPoints())+"\n" );
+                    }
+
+                    final Dialog d=new Dialog(MainActivity.this);
+                    d.setTitle("Game over");
+                    d.setCancelable(true);
+                    d.setContentView(R.layout.layout_winner);
+
+                    TextView winnerTeam = (TextView) d.findViewById(R.id.winner_team);
+                    winnerTeam.setText(teamAdapter.getItem(0).getName());
+
+                    Button restart = (Button) d.findViewById(R.id.btn_restart_winner);
+                    restart.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+                    });
+
+                    Button cancel = (Button) d.findViewById(R.id.btn_cancel_winner);
+                    cancel.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            d.dismiss();
+                        }
+                    });
+
+                    d.show();
+                }
+
 
             }
         });

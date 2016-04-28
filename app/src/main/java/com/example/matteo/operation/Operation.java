@@ -19,10 +19,14 @@ import java.util.Set;
  */
 public class Operation {
 
+    private static Operation operation = null;
+    private int turn = 1;
+    private int teamTurn = 0;
+
     //1-squadra,
     //2-turno,
     //3-categoria + istruzione fissa + istruzione differente(se prevista)
-    private List<String> valueTodisplay = null;
+    private static List<String> valueTodisplay = null;
 
     private List<String> listCategory = null;
     private List<String> listCategoryDescription = null;
@@ -33,12 +37,14 @@ public class Operation {
     private FileOperation fo = null;
     private Random rnd = null;
 
-    private Set<String> listTeam = null;
-    private int maxTurn = 0;
+    private static Set<String> setTeam = null;
+    private static List<String> listTeam = null;
+    private static int maxTurn = 0;
 
-    private SharedPreferences preferences;
+    private static SharedPreferences preferences;
 
-    public Operation(Context context) {
+    private Operation(Context context) {
+
         fo = new FileOperation();
 
         listCategory = Arrays.asList(context.getResources().getStringArray(R.array.category_array));
@@ -47,33 +53,71 @@ public class Operation {
         listLetters = fo.readFile(context, R.raw.list_category_letters);
         listTeamPlay = fo.readFile(context, R.raw.list_category_team_play);
 
-        preferences = context.getSharedPreferences(Constants.PREF_FILE, context.MODE_PRIVATE);
-        listTeam = preferences.getStringSet("teamsName", null);
-        maxTurn = preferences.getInt("turnsNumber", 0);
-
-        SharedPreferences.Editor edit = preferences.edit();
-        edit.putInt("currentTurn", 1);
-
         rnd = new Random();
-        valueTodisplay = new ArrayList<>();
+
+        preferences = context.getSharedPreferences(Constants.PREF_FILE, context.MODE_PRIVATE);
+        setTeam = preferences.getStringSet("teamsName", null);
+        listTeam = new ArrayList<>();
+
+        for(String t : setTeam){
+            listTeam.add(t);
+        }
+
+        maxTurn = preferences.getInt("turnsNumber", 0);
+        valueTodisplay = Arrays.asList(" ", " ", " ");
+
     }
 
+    public static Operation getIstance(Context context){
+        if(operation == null)
+            operation = new Operation(context);
+
+        preferences = context.getSharedPreferences(Constants.PREF_FILE, context.MODE_PRIVATE);
+        setTeam = preferences.getStringSet("teamsName", null);
+        listTeam = new ArrayList<>();
+
+        for(String t : setTeam){
+            listTeam.add(t);
+        }
+
+        maxTurn = preferences.getInt("turnsNumber", 0);
+        valueTodisplay = Arrays.asList(" ", " ", " ");
+        maxTurn = preferences.getInt("turnsNumber", 0);
+
+        return operation;
+    }
 
     public List<String> getTurnData(){
 
-        valueTodisplay.clear();
-        int turn = preferences.getInt("currentTurn", 1);
+       // valueTodisplay.clear();
+
+        //int turn = preferences.getInt("currentTurn", 1);
+
+        //turn = 1 e teamTurn = 0
 
         //1-squadra
         if(turn <= maxTurn){
-            if(listTeam.iterator().hasNext())
-                valueTodisplay.add(listTeam.iterator().next()); //squadra
-            else {
-                listTeam = preferences.getStringSet("teamsName", null);
-                valueTodisplay.add(listTeam.iterator().next()); //squadra
+            valueTodisplay.set(1, String.valueOf(turn)); //turno
+            valueTodisplay.set(2, areaData()); //stringa area
+
+            if(teamTurn < listTeam.size()) {
+                valueTodisplay.set(0, listTeam.get(teamTurn)); //squadra
+                teamTurn++;
+
+                if(teamTurn == listTeam.size()) {
+                    teamTurn=0;
+                    turn++;
+                }
             }
-            valueTodisplay.add(String.valueOf(turn)); //turno
-            valueTodisplay.add(areaData()); //stringa area
+
+        }
+        else{
+            valueTodisplay.set(0, ""); //squadra
+            valueTodisplay.set(1, ""); //turno
+            valueTodisplay.set(2, ""); //stringa area
+
+            turn = 1;
+            teamTurn = 0;
         }
 
         return valueTodisplay;
@@ -94,5 +138,7 @@ public class Operation {
 
         return description+instruction;
     }
+
+
 
 }
