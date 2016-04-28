@@ -294,5 +294,43 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+        final ImageView btnReturn = (ImageView) findViewById(R.id.btn_restart);
+        btnReturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog d=new Dialog(MainActivity.this);
+                d.setTitle("Restart");
+                d.setCancelable(true);
+                d.setContentView(R.layout.layout_restart);
+
+
+                Button restart = (Button) d.findViewById(R.id.btn_restart_restart);
+                restart.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+
+                Button cancel = (Button) d.findViewById(R.id.btn_cancel_restart);
+                cancel.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        d.dismiss();
+                    }
+                });
+
+                d.show();
+            }
+        });
+
     }
+
+
+
 }
