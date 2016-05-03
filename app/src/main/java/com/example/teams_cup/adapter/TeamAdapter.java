@@ -1,4 +1,4 @@
-package com.example.matteo.adapter;
+package com.example.teams_cup.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,15 +8,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.matteo.model.Team;
-import com.example.matteo.prova_2.R;
+import com.example.teams_cup.activity.R;
+import com.example.teams_cup.model.Team;
 
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 /**
- * Created by matteo on 07/03/2016.
+ * Created by teams_cup on 07/03/2016.
  */
 public class TeamAdapter extends BaseAdapter {
 

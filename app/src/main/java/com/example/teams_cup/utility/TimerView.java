@@ -1,4 +1,4 @@
-package com.example.matteo.utility;
+package com.example.teams_cup.utility;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -10,7 +10,7 @@ import android.text.TextPaint;
 import android.view.View;
 
 /**
- * Created by matteo on 10/03/2016.
+ * Created by teams_cup on 10/03/2016.
  */
 public class TimerView extends View {
     private final Paint backgroundPaint;

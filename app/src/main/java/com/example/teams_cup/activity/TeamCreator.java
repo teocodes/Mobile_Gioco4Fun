@@ -1,17 +1,17 @@
-package com.example.matteo.prova_2;
+package com.example.teams_cup.activity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.matteo.model.Team;
-import com.example.matteo.utility.Constants;
+import com.example.teams_cup.model.Team;
+import com.example.teams_cup.utility.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 /**
- * Created by matteo on 07/03/2016.
+ * Created by teams_cup on 07/03/2016.
  */
 public class TeamCreator {
 

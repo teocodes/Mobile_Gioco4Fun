@@ -1,7 +1,7 @@
-package com.example.matteo.model;
+package com.example.teams_cup.model;
 
 /**
- * Created by matteo on 07/03/2016.
+ * Created by teams_cup on 07/03/2016.
  */
 public class Team {
     private String name;

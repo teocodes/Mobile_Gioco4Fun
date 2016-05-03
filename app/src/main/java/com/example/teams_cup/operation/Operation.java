@@ -1,12 +1,12 @@
-package com.example.matteo.operation;
+package com.example.teams_cup.operation;
 
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.matteo.file.FileOperation;
-import com.example.matteo.prova_2.R;
-import com.example.matteo.utility.Constants;
+import com.example.teams_cup.activity.R;
+import com.example.teams_cup.file.FileOperation;
+import com.example.teams_cup.utility.Constants;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,7 +15,7 @@ import java.util.Random;
 import java.util.Set;
 
 /**
- * Created by matteo on 16/03/2016.
+ * Created by teams_cup on 16/03/2016.
  */
 public class Operation {
 

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Prova_2</string>
+    <string name="app_name">Teams Cup</string>
     <string name="set_minutes">Minutes</string>
     <string name="timer">Timer</string>
     <string name="restart">Restart</string>
@@ -10,7 +10,7 @@
     <string name="game_over">Game over</string>
     <string name="msg_empty_field_team">Field %1$d is empty!\nInsert team name</string>
     <string name="msg_empty_field_turn">Field turn is empty!\nInsert turn number</string>
-    <string name="title_bar">Play</string>
+    <string name="title_bar">Teams Cup</string>
     <string name="team">Team</string>
     <string name="turn">Turn:</string>
     <string name="btn_continue">Continue</string>

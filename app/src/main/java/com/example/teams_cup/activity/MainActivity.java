@@ -1,4 +1,4 @@
-package com.example.matteo.prova_2;
+package com.example.teams_cup.activity;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,13 +16,13 @@ import android.widget.ListView;
 import android.widget.NumberPicker;
 import android.widget.TextView;
 
-import com.example.matteo.adapter.TeamAdapter;
-import com.example.matteo.file.FileOperation;
-import com.example.matteo.operation.Operation;
-import com.example.matteo.utility.Dice;
-import com.example.matteo.utility.Letters;
-import com.example.matteo.utility.TimerView;
-import com.example.matteo.utility.Words;
+import com.example.teams_cup.adapter.TeamAdapter;
+import com.example.teams_cup.file.FileOperation;
+import com.example.teams_cup.operation.Operation;
+import com.example.teams_cup.utility.Dice;
+import com.example.teams_cup.utility.Letters;
+import com.example.teams_cup.utility.TimerView;
+import com.example.teams_cup.utility.Words;
 
 import java.util.List;
 
@@ -248,20 +249,25 @@ public class MainActivity extends AppCompatActivity {
                     timer.setEnabled(false);
                     btnDrawer.setEnabled(false);
 
-
-                    textView.setText(R.string.ranking + "\n\n");
+                    textView.setText(R.string.ranking);
+                    textView.append("\n\n");
 
                     for(int i=0;i<teamAdapter.getCount();i++){
                         textView.append(teamAdapter.getItem(i).getName()+" - "+String.valueOf(teamAdapter.getItem(i).getPoints())+"\n" );
                     }
 
                     final Dialog d=new Dialog(MainActivity.this);
-                    d.setTitle(R.string.game_over);
+                    d.requestWindowFeature(Window.FEATURE_NO_TITLE);
+//                    d.setTitle(R.string.game_over);
                     d.setCancelable(true);
                     d.setContentView(R.layout.layout_winner);
 
                     TextView winnerTeam = (TextView) d.findViewById(R.id.winner_team);
-                    winnerTeam.setText(teamAdapter.getItem(0).getName());
+
+                    if(teamAdapter.getItem(0).getPoints() == teamAdapter.getItem(1).getPoints())
+                        winnerTeam.setText("Pareggio!");
+                    else
+                        winnerTeam.setText(teamAdapter.getItem(0).getName());
 
                     Button restart = (Button) d.findViewById(R.id.btn_restart_winner);
                     restart.setOnClickListener(new View.OnClickListener() {
@@ -295,6 +301,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final Dialog d=new Dialog(MainActivity.this);
+                d.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 d.setTitle(R.string.restart);
                 d.setCancelable(true);
                 d.setContentView(R.layout.layout_restart);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Prova_2</string>
-    <string name="set_minutes">Minuti</string>
+    <string name="app_name">Teams Cup</string>
+    <string name="set_minutes">Setta i minuti</string>
     <string name="timer">Timer</string>
     <string name="restart">Ricomincia</string>
     <string name="dice">Lancia il dado</string>
@@ -11,7 +11,7 @@
     <string name="game_over">Partita finita</string>
     <string name="msg_empty_field_team">Campo %1$d vuoto!\nInserire nome squadra</string>
     <string name="msg_empty_field_turn">Campo turno vuoto!\nInserire numero di turni</string>
-    <string name="title_bar">Gioca</string>
+    <string name="title_bar">Teams Cup</string>
     <string name="team">Squadra</string>
     <string name="turn">Turno:</string>
     <string name="btn_continue">Continua</string>

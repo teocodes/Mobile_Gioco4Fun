@@ -1,4 +1,4 @@
-package com.example.matteo.prova_2;
+package com.example.teams_cup.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,13 +15,13 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.matteo.utility.Constants;
+import com.example.teams_cup.utility.Constants;
 
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Created by matteo on 09/03/2016.
+ * Created by teams_cup on 09/03/2016.
  */
 public class SettingsActivity extends Activity {
     Spinner spinner = null;
