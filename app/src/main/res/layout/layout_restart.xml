@@ -18,9 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/msg_restart"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:typeface="sans" />
+            style="@style/text_winner_pre"/>
 
     </LinearLayout>
 

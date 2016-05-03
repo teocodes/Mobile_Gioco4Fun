@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="category_description_array">
-        <item>LETTERE:\nIn questa categoria bisogna eseguire le istruzioni riportate di seguito.\n
+        <item>LETTERE:\n\nIn questa categoria bisogna eseguire le istruzioni riportate di seguito.\n
 			NB. per la generazione delle lettere e per il timer usare gli appositi pulsanti\n
 			(possono leggerlo tutti)\n\n</item>
-        <item>FANTASIA:\nIn questa categoria bisogna inventare una storia con un tot di parole casuali( determinato dal dado)\n
-			e far indovinare alla propria squadra la maggior parte delle parole pescate.\n
-			NB. per la generazione delle parole, per il lancio del dado e per il timer usare gli appositi pulsanti\n
-			(Attenzione!!!Il risultato della scelta delle parole NON può essere letto da tutti, ma solo dalla persona interessata)</item>
-        <item>GIOCO DI SQUADRA:\nIn questa categoria bisogna cercare di far indovinare alla propria squadra ciò che è indicato di seguito.\n
-			Ogni istruzione è indicata con COSA FARE: AMBITO/CATEGORIA DEL SOGGETTO DA FARE
-			(es.MIMO: ANIMALE/MAMMIFERO bisogna mimare un animale della categoria dei mammiferi scelto in base alla lettera pescata\n
-			NB. per la generazione delle lettere e per il timer usare gli appositi pulsanti\n
-			(NON può essere letto da tutti, ma solo dalla persona interessata)\n\n</item>
+        <item>
+			FANTASIA:\n\nIn questa categoria bisogna inventare una storia con un tot di parole casuali( determinato dal dado)
+			\ne far indovinare alla propria squadra la maggior parte delle parole pescate.
+			\n\nNB. per la generazione delle parole, per il lancio del dado e per il timer usare gli appositi pulsanti
+			\n(Attenzione!!!Il risultato della scelta delle parole NON può essere letto da tutti, ma solo dalla persona interessata)</item>
+        <item>GIOCO DI SQUADRA:\n\nIn questa categoria bisogna cercare di far indovinare alla propria squadra ciò che è indicato di seguito.
+			\nOgni istruzione è indicata con COSA FARE: AMBITO/CATEGORIA DEL SOGGETTO DA FARE
+			(es.MIMO: ANIMALE/MAMMIFERO bisogna mimare un animale della categoria dei mammiferi scelto in base alla lettera pescata
+			\n\nNB. per la generazione delle lettere e per il timer usare gli appositi pulsanti\n(NON può essere letto da tutti, ma solo dalla persona interessata)\n\n</item>
     </string-array>
 </resources>

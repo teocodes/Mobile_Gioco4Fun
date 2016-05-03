@@ -18,18 +18,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/msg_winner"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:typeface="sans" />
+            style="@style/text_winner_pre" />
 
         <TextView
             android:id="@+id/winner_team"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:typeface="serif" />
+            style="@style/text_winner" />
 
     </LinearLayout>
 
