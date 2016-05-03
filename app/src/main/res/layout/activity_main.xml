@@ -20,7 +20,7 @@
             style="@style/text_settings_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="left"
+            android:layout_gravity="center"
             android:text="@string/title_bar" />
 
         <ImageView
