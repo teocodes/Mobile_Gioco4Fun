@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="La squadra vincitrice è:"
+            android:text="@string/msg_winner"
             android:textSize="24sp"
             android:textStyle="bold"
             android:typeface="sans" />
@@ -44,14 +44,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Ricomincia" />
+            android:text="@string/restart" />
 
         <Button
             android:id="@+id/btn_cancel_winner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Indietro" />
+            android:text="@string/btn_cancel" />
     </LinearLayout>
 
 </LinearLayout>

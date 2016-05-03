@@ -78,7 +78,7 @@ public class SettingsActivity extends Activity {
                         if(et.getText().toString() != null && et.getText().toString().compareTo("") != 0)
                             names.add(et.getText().toString());
                         else
-                            Toast.makeText(SettingsActivity.this,"Campo "+ (i+1) +" vuoto!\nInserire nome squadra", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SettingsActivity.this, getResources().getString(R.string.msg_empty_field_team, i+1), Toast.LENGTH_SHORT).show();
                     }
                     else{
                         Log.i("noeditText","no edit text "+ i);
@@ -91,10 +91,10 @@ public class SettingsActivity extends Activity {
                     if (Integer.valueOf(etTurns.getText().toString()) > 0)
                         turnsNumber = Integer.valueOf(etTurns.getText().toString());
                     else
-                        Toast.makeText(SettingsActivity.this, "Campo turno vuoto!\nInserire numero di turni", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SettingsActivity.this, R.string.msg_empty_field_turn, Toast.LENGTH_SHORT).show();
                 }
                 else
-                    Toast.makeText(SettingsActivity.this, "Campo turno vuoto!\nInserire numero di turni", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SettingsActivity.this, R.string.msg_empty_field_turn, Toast.LENGTH_SHORT).show();
 
 
                 if(names.size() == teamsNumber && turnsNumber != 0) {

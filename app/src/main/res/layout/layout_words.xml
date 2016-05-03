@@ -19,7 +19,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@android:color/background_light"
-            android:text="ProvaNonSo"
             android:textSize="24sp"
             android:textStyle="bold"
             android:typeface="sans"
@@ -32,6 +31,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Cancel" />
+        android:text="@string/btn_cancel" />
 
 </LinearLayout>

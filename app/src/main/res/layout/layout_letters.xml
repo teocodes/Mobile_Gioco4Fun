@@ -18,7 +18,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center|top"
             android:background="@android:color/transparent"
-            android:text="Z"
             android:textColor="@android:color/black"
             android:textSize="100sp"
             android:textStyle="bold"
@@ -32,5 +31,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Cancel" />
+        android:text="@string/btn_cancel" />
 </LinearLayout>

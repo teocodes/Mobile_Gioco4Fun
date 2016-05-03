@@ -8,7 +8,7 @@
         android:id="@+id/current_team"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Squadra"
+        android:text="@string/team"
         style="@style/text_team_current"
         android:gravity="center" />
 
@@ -24,7 +24,7 @@
             android:id="@+id/label_turn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Turno:"
+            android:text="@string/turn"
             style="@style/normal_text"
             />
 
@@ -32,7 +32,6 @@
             android:id="@+id/current_turn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="N turno"
             style="@style/normal_text"
             android:layout_marginLeft="5dp" />
     </LinearLayout>
@@ -61,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text="Continue"
+        android:text="@string/btn_continue"
         android:textSize="20sp"
         android:typeface="serif" />
 
@@ -69,7 +68,7 @@
         android:id="@+id/btn_change"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Change card"
+        android:text="@string/btn_change"
         android:layout_marginTop="5dp"
         android:typeface="serif"
         android:textSize="20sp" />

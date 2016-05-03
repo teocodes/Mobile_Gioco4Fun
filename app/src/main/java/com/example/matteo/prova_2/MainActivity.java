@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 final Dialog d=new Dialog(MainActivity.this);
-                d.setTitle("Set minutes");
+                d.setTitle(R.string.set_minutes);
                 d.setCancelable(true);
                 d.setContentView(R.layout.layout_timer);
 
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         final Dialog d2=new Dialog(MainActivity.this);
-                        d2.setTitle("Timer");
+                        d2.setTitle(R.string.timer);
                         d2.setCancelable(true);
                         d2.setContentView(R.layout.layout_timer_action);
 
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 tv.start(true);
-                                btnStart.setText("Restart");
+                                btnStart.setText(R.string.restart);
                             }
                         });
 
@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 final Dialog d=new Dialog(MainActivity.this);
-                d.setTitle("Roll dice");
+                d.setTitle(R.string.dice);
                 d.setCancelable(true);
                 d.setContentView(R.layout.layout_dice);
 
@@ -170,21 +170,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //carico words file nel db
         FileOperation fo = new FileOperation();
         final List<String> listWords = fo.readFile(MainActivity.this, R.raw.list_words);
-
-//        Log.i("STAMP", "arriva");
-//        for(int i=0;i<listWords.size();i++) {
-//            Log.i("LIST", listWords.get(i));
-//        }
 
         final FloatingActionButton words = (FloatingActionButton) findViewById(R.id.fab_words);
         words.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final Dialog d=new Dialog(MainActivity.this);
-                d.setTitle("Choose word");
+                d.setTitle(R.string.word);
                 d.setCancelable(true);
                 d.setContentView(R.layout.layout_words);
 
@@ -208,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final Dialog d = new Dialog(MainActivity.this);
-                d.setTitle("Choose letter");
+                d.setTitle(R.string.letter);
                 d.setCancelable(true);
                 d.setContentView(R.layout.layout_letters);
 
@@ -255,14 +249,14 @@ public class MainActivity extends AppCompatActivity {
                     btnDrawer.setEnabled(false);
 
 
-                    textView.setText("Classifica finale:\n\n");
+                    textView.setText(R.string.ranking + "\n\n");
 
                     for(int i=0;i<teamAdapter.getCount();i++){
                         textView.append(teamAdapter.getItem(i).getName()+" - "+String.valueOf(teamAdapter.getItem(i).getPoints())+"\n" );
                     }
 
                     final Dialog d=new Dialog(MainActivity.this);
-                    d.setTitle("Game over");
+                    d.setTitle(R.string.game_over);
                     d.setCancelable(true);
                     d.setContentView(R.layout.layout_winner);
 
@@ -301,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final Dialog d=new Dialog(MainActivity.this);
-                d.setTitle("Restart");
+                d.setTitle(R.string.restart);
                 d.setCancelable(true);
                 d.setContentView(R.layout.layout_restart);
 

@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:text="Settings" />
+                android:text="@string/settings" />
         </android.support.v7.widget.Toolbar>
 
         <LinearLayout
@@ -36,7 +36,7 @@
                 style="@style/normal_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Choose the number of teams" />
+                android:text="@string/choose_teams_number" />
 
             <Spinner
                 android:id="@+id/spinner"
@@ -51,7 +51,7 @@
             style="@style/normal_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Insert teams name" />
+            android:text="@string/insert_teams_name" />
 
         <LinearLayout
             android:id="@+id/insert_team_area"
@@ -71,7 +71,7 @@
                 style="@style/normal_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Choose the number of turns" />
+                android:text="@string/choose_turns_number" />
 
             <EditText
                 android:id="@+id/number_of_turns"
@@ -88,7 +88,7 @@
             style="@style/normal_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Confirm" />
+            android:text="@string/btn_confirm" />
 
     </LinearLayout>
 </ScrollView>

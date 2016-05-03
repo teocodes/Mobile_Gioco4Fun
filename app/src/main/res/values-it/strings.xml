@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Prova_2</string>
+    <string name="set_minutes">Minuti</string>
+    <string name="timer">Timer</string>
+    <string name="restart">Ricomincia</string>
+    <string name="dice">Lancia il dado</string>
+    <string name="word">Scegli la parola</string>
+    <string name="letter">Scegli la lettera</string>
+    <string name="ranking">Classifica finale:</string>
+    <string name="game_over">Partita finita</string>
+    <string name="msg_empty_field_team">Campo %1$d vuoto!\nInserire nome squadra</string>
+    <string name="msg_empty_field_turn">Campo turno vuoto!\nInserire numero di turni</string>
+    <string name="title_bar">Gioca</string>
+    <string name="team">Squadra</string>
+    <string name="turn">Turno:</string>
+    <string name="btn_continue">Continua</string>
+    <string name="btn_change">Cambia scheda</string>
+    <string name="btn_cancel">Indietro</string>
+    <string name="msg_restart">Vuoi ricominciare la partita?</string>
+    <string name="settings">Impostazioni</string>
+    <string name="choose_teams_number">Scegli il numero di squadre</string>
+    <string name="insert_teams_name">Inserisci il nome delle squadre</string>
+    <string name="choose_turns_number">Scegli il numero di turni</string>
+    <string name="btn_confirm">Conferma</string>
+    <string name="start">Inizia</string>
+    <string name="msg_winner">La squadra vincitrice è:</string>
+</resources>

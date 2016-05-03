@@ -25,14 +25,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Start" />
+            android:text="@string/start" />
 
         <Button
             android:id="@+id/btn_cancel_timer_action"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Cancel" />
+            android:text="@string/btn_cancel" />
 
     </LinearLayout>
 

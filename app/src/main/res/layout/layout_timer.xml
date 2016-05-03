@@ -22,13 +22,13 @@
             android:id="@+id/btn_ok_timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Confirm" />
+            android:text="@string/btn_confirm" />
 
         <Button
             android:id="@+id/btn_cancel_timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel" />
+            android:text="@string/btn_cancel" />
     </LinearLayout>
 
 </LinearLayout>
