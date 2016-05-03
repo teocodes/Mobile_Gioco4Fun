@@ -1,4 +1,4 @@
-package com.example.matteo.utility;
+package com.example.teams_cup.utility;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.matteo.prova_2.R;
+import com.example.teams_cup.activity.R;
 
 import java.util.List;
 import java.util.Random;
@@ -17,7 +17,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * Created by matteo on 15/03/2016.
+ * Created by teams_cup on 15/03/2016.
  */
 public class Words {
 
