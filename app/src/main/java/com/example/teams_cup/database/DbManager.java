@@ -1,4 +1,4 @@
-package com.example.matteo.database;
+package com.example.teams_cup.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.List;
 
 /**
- * Created by matteo on 16/03/2016.
+ * Created by teams_cup on 16/03/2016.
  */
 public abstract class DbManager {
 

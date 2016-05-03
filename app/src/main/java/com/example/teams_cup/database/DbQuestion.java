@@ -1,17 +1,17 @@
-package com.example.matteo.database;
+package com.example.teams_cup.database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
-import com.example.matteo.model.Question;
-import com.example.matteo.utility.Constants;
+import com.example.teams_cup.model.Question;
+import com.example.teams_cup.utility.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by matteo on 16/03/2016.
+ * Created by teams_cup on 16/03/2016.
  */
 public class DbQuestion extends DbManager {
 

@@ -1,7 +1,7 @@
-package com.example.matteo.utility;
+package com.example.teams_cup.utility;
 
 /**
- * Created by matteo on 16/03/2016.
+ * Created by teams_cup on 16/03/2016.
  */
 public class Constants {
 

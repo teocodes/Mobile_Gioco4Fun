@@ -1,4 +1,4 @@
-package com.example.matteo.file;
+package com.example.teams_cup.file;
 
 import android.content.Context;
 
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by matteo on 16/03/2016.
+ * Created by teams_cup on 16/03/2016.
  */
 public class FileOperation {
 

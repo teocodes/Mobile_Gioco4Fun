@@ -1,4 +1,4 @@
-package com.example.matteo.utility;
+package com.example.teams_cup.utility;
 
 
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.matteo.prova_2.R;
+import com.example.teams_cup.activity.R;
 
 import java.util.Random;
 import java.util.Timer;
