@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="category_description_array">
-        <item>LETTERE:\n\nIn questa categoria bisogna eseguire le istruzioni riportate di seguito.\n
-			NB. per la generazione delle lettere e per il timer usare gli appositi pulsanti\n
-			(possono leggerlo tutti)\n\n</item>
+        <item>LETTERE:\n\nIn questa categoria bisogna eseguire le istruzioni riportate di seguito.
+			\nNB. per la generazione delle lettere e per il timer usare gli appositi pulsanti
+			\n(possono leggerlo tutti)\n\n</item>
         <item>
 			FANTASIA:\n\nIn questa categoria bisogna inventare una storia con un tot di parole casuali( determinato dal dado)
 			\ne far indovinare alla propria squadra la maggior parte delle parole pescate.
